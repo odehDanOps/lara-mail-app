@@ -19,7 +19,7 @@ class CustomJobWithoutParamsMail extends Mailable implements ShouldQueue
      */
     public function __construct()
     {
-        $this->subject = 'Financial Consultant'; # TODO: make dynamic
+        $this->subject = 'Hello'; # TODO: make dynamic
     }
 
     /**

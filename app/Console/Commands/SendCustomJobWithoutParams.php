@@ -30,7 +30,7 @@ class SendCustomJobWithoutParams extends Command
         $this->info('Starting email sending...');
 
         $chunkSize = 1000; // Adjust chunk size as needed
-        $emails = DB::table('emails')->where('status', 0)->cursor()->chunk($chunkSize);
+        $emails = DB::table('emails')->where('status', 0)->limit(9000)->cursor()->chunk($chunkSize);
 
         foreach ($emails as $chunk) {
             foreach ($chunk as $email) {
